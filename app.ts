@@ -53,8 +53,29 @@ interface Admin extends User{
 
 
 
+// agar mene same name se do interface banaya to vo automatically merge ho jaega,
+// it doesn't overwrite each other.
+
+interface user1{
+    name:string,
+}
+
+interface user1{
+    email:string
+}
 
 
+function abcd(obj:user1){
+}
+
+
+// type aliases,
+
+// we make our custom type of types thus, we say it ; type:aliases.
+
+type sankhya = number;
+
+let b : sankhya;
 
 
 
