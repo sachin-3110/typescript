@@ -12,7 +12,7 @@ enum UserRoles{
     SUPER_ADMIN = "super_admin"
 }
 
-console.log(UserRoles.ADMIN)
+// console.log(UserRoles.ADMIN)
 
 
 
@@ -35,6 +35,24 @@ function getDataofUser(obj:Obj){
 }
 
 getDataofUser({name:"sachin",email:"sachin",password:"aksdjf;lkasjd"})
+
+
+
+// extend interface
+
+interface User{
+    name:string,
+    email:string,
+    password:string;
+}
+
+interface Admin extends User{
+    admin:boolean
+}
+// jo user ke pass hota hai vo to hai hi, but admin jo hai vo kuch naye properties ke saath extend ho jaega.
+
+
+
 
 
 
