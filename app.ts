@@ -107,6 +107,44 @@ class MusicGenerator{
 let newMusic = new MusicGenerator("Milne hai mujhse aai, fir jaane kyun  tanhaai", "Arijit")
 
 
-console.log(newMusic)
+// console.log(newMusic)
+
+
+
+
+class classForMethods{
+    constructor(private firstName:string, public lastName:string){
+        
+    }
+
+    anyMethod(){
+        console.log(this.firstName)
+    }
+    anotherMethod(){
+        this.lastName="sharma"
+    }
+}
+
+class anotherClassForMethods extends classForMethods{
+    public material:string  = "metal"
+
+    changeName(){
+        this.firstName = "Aaalu"
+    }
+}
+
+
+let student = new classForMethods("Abhishek","sharma")
+let studen2 = new classForMethods("ROhan","sharma")
+
+// studen2.anyMethod()
+let newClassContainer = new anotherClassForMethods("sachin","sharma")
+
+newClassContainer.changeName()
+console.log(newClassContainer)
+
+
+
+
 
 

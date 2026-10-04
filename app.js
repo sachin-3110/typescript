@@ -34,4 +34,30 @@ class MusicGenerator {
     }
 }
 let newMusic = new MusicGenerator("Milne hai mujhse aai, fir jaane kyun  tanhaai", "Arijit");
-console.log(newMusic);
+// console.log(newMusic)
+class classForMethods {
+    firstName;
+    lastName;
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    anyMethod() {
+        console.log(this.firstName);
+    }
+    anotherMethod() {
+        this.lastName = "sharma";
+    }
+}
+class anotherClassForMethods extends classForMethods {
+    material = "metal";
+    changeName() {
+        this.firstName = "Aaalu";
+    }
+}
+let student = new classForMethods("Abhishek", "sharma");
+let studen2 = new classForMethods("ROhan", "sharma");
+// studen2.anyMethod()
+let newClassContainer = new anotherClassForMethods("sachin", "sharma");
+newClassContainer.changeName();
+console.log(newClassContainer);
