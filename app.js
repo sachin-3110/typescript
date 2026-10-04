@@ -60,4 +60,14 @@ let studen2 = new classForMethods("ROhan", "sharma");
 // studen2.anyMethod()
 let newClassContainer = new anotherClassForMethods("sachin", "sharma");
 newClassContainer.changeName();
-console.log(newClassContainer);
+class stName {
+    name;
+    constructor(name) {
+        this.name = name;
+    }
+    onchange() {
+        this.name = "oyyye";
+        console.log(this.name);
+    }
+}
+let n = new stName("sachin");
