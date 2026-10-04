@@ -78,4 +78,35 @@ type sankhya = number;
 let b : sankhya;
 
 
+let c : string| null | number;
+
+// it's kind of weird using three types of data types, thus there is a type aliases so we use "type" to store that particular data types into the variable thus we can use those varialbles later being your new data types.
+
+type cValue = string | null | number;
+
+
+let d : cValue;
+
+
+
+// classes and constructors;
+
+class Music{
+    name = "hello hello";
+    artist = "bandar khilaadi"
+}
+
+const meraGaana = new Music()
+
+
+class MusicGenerator{
+    constructor(public SongName:string, public artist:string ="random singer"){}
+}
+
+
+let newMusic = new MusicGenerator("Milne hai mujhse aai, fir jaane kyun  tanhaai", "Arijit")
+
+
+console.log(newMusic)
+
 
