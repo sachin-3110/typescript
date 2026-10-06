@@ -147,7 +147,7 @@ newClassContainer.changeName()
 class stName{
     constructor(public readonly name:string){}
     onchange(){
-        this.name="oyyye"
+        // this.name="oyyye"
         console.log(this.name)
     }
 }
@@ -155,7 +155,29 @@ class stName{
 let n = new stName("sachin")
 
 
+//functions
 
+function basicFnc(){
 
+}
 
+function standardFnc():void{
 
+}
+
+function primeFnc(arg:string):void{
+    console.log(arg)
+}
+
+//getting a callback into the params.
+
+function ultraPrimeFnc(creator:string, callback:(arg:string)=>void):string{
+    console.log("createdBy:", creator)
+    callback("hii")
+
+    return "Returned by ultraPrimeFnc "
+}
+
+ultraPrimeFnc("sachin",(hello)=>{
+  return console.log(hello,"hyoooo")
+})

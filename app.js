@@ -66,8 +66,25 @@ class stName {
         this.name = name;
     }
     onchange() {
-        this.name = "oyyye";
+        // this.name="oyyye"
         console.log(this.name);
     }
 }
 let n = new stName("sachin");
+//functions
+function basicFnc() {
+}
+function standardFnc() {
+}
+function primeFnc(arg) {
+    console.log(arg);
+}
+//getting a callback into the params.
+function ultraPrimeFnc(creator, callback) {
+    console.log("createdBy:", creator);
+    callback("hii");
+    return "Returned by ultraPrimeFnc ";
+}
+ultraPrimeFnc("sachin", (hello) => {
+    return console.log(hello, "hyoooo");
+});
