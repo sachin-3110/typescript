@@ -85,6 +85,13 @@ function ultraPrimeFnc(creator, callback) {
     callback("hii");
     return "Returned by ultraPrimeFnc ";
 }
-ultraPrimeFnc("sachin", (hello) => {
-    return console.log(hello, "hyoooo");
-});
+// ultraPrimeFnc("sachin",(hello)=>{
+//   return console.log(hello,"hyoooo")
+// })
+// optional and default parameters
+function fillDetails(name, age, gender = "not Provided") {
+    // function fillDetails(name:string, age:number, gender?:string){
+    console.log("Name:", name.toUpperCase(), "|", "Gender:", gender?.toUpperCase(), "|", "Age:", age);
+}
+fillDetails("sachin", 22, "male");
+fillDetails("Abhi", 20);
